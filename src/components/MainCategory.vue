@@ -53,7 +53,7 @@ export default {
     text-align: center;
     width: 100%;
     background-color: #fff;
-    padding-top: 150px;
+    padding-top: 100px;
 
     .title {
         width: 50%;
@@ -66,6 +66,17 @@ export default {
         p {
             padding-top: 20px;
         }
+    }
+
+    .cards {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 40px;
+        flex-direction: row;
     }
 
 }
