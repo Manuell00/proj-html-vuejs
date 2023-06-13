@@ -35,28 +35,20 @@ export default {
 
 <!-- TEMPLATE -->
 <template>
-  <!-- In questo caso visualizzo il componente AppLoader solo quando la variabile store.loading è == true, quando in realtà la pagina è caricata questo diventerà false e quindi non sarà più visualizzato  -->
-  <div v-if="store.loading">
-    <AppLoader />
-  </div>
+  <!-- Inserisco l'header e il suo componente -->
+  <header>
+    <AppHeader />
+  </header>
 
-  <div v-else>
-    <!-- Inserisco l'header e il suo componente -->
-    <header>
-      <AppHeader />
-    </header>
+  <!-- Inserisco il main e il suo componente -->
+  <main>
+    <AppMain />
+  </main>
 
-    <!-- Inserisco il main e il suo componente -->
-    <main>
-      <AppMain />
-    </main>
-
-    <!-- Inserisco il footer e il suo componente -->
-    <footer>
-      <AppFooter />
-    </footer>
-
-  </div>
+  <!-- Inserisco il footer e il suo componente -->
+  <footer>
+    <AppFooter />
+  </footer>
 </template>
 
 

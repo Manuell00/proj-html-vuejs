@@ -55,7 +55,6 @@ svg {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 50px;
-    color: $bg-color;
 }
 </style>
   
