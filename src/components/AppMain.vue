@@ -31,7 +31,10 @@ export default {
 
 <!-- TEMPLATE -->
 <!-- In qusto caso essendo un componente molto grosso, lo renderò padre di altri piccoli sottocomponenti -->
-<template></template>
+<template>
+    <MainJumbotron />
+    <MainCategory />
+</template>
 
 <!-- STYLE -->
 <style scoped lang="scss">
