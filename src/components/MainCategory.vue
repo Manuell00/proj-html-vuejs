@@ -185,7 +185,8 @@ export default {
 
     .cards {
         width: 100%;
-        height: 400px;
+        padding: 50px 0;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;

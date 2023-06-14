@@ -50,14 +50,14 @@ export default {
                 },
                 {
                     id: "5",
-                    src: "../../public/images/product-21.jpg",
+                    src: "../../public/images/product-5.jpg",
                     title: "Animal transport cage",
                     actualPrice: "$25",
                     oldPrice: "$25"
                 },
                 {
                     id: "6",
-                    src: "../../public/images/product-20.jpg",
+                    src: "../../public/images/product-10.jpg",
                     title: "Closable cat litter",
                     actualPrice: "$25",
                     oldPrice: "$25"
@@ -96,34 +96,42 @@ export default {
 
 .container-fluid {
     text-align: center;
+    height: auto;
     width: 100%;
     background-color: #fff;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 150px;
 
-    .title {
-        width: 50%;
-        margin: 0 auto;
-        padding-bottom: 50px;
+    .container {
+        height: auto;
 
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
+        .title {
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 50px;
+
+            h1 {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            p {
+                padding-top: 20px;
+            }
         }
 
-        p {
-            padding-top: 20px;
+        .cards {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            row-gap: 100px;
+            flex-direction: row;
         }
     }
 
-    .cards {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        row-gap: 100px;
-        flex-direction: row;
-    }
+
 }
 </style>
