@@ -36,7 +36,7 @@ export default {
 @use '../styles/partials/_variables.scss' as *;
 
 .prod-card {
-    width: calc((100% / 3) - 20px);
+    width: calc((100% / 3) - 10px);
     height: 600px;
     padding-bottom: 50px;
     background-color: $bg-darkgreen;
@@ -45,6 +45,13 @@ export default {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+    transition: transform 0.3s;
+
+
+    &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+    }
 
     h2 {
         font-family: 'Times New Roman', Times, serif;

@@ -153,13 +153,19 @@ export default {
                 font-family: 'Times New Roman', Times, serif;
             }
 
-
             button {
                 font-size: small;
                 font-weight: 600;
                 padding: 10px 20px;
                 border-radius: 50px;
                 border: 0;
+                transition: background-color 0.5s;
+                transform: 0.5s;
+            }
+
+            button:hover {
+                background-color: #ccc;
+                transform: scale(1.1);
             }
         }
 
