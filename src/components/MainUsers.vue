@@ -122,21 +122,47 @@ export default {
 
     <div class="container-fluid" id="double-image">
         <div class="images-container">
+
             <!-- Inserisco la prima image -->
             <div class="first-image">
-
+                <div class="images-text">
+                    <h5>FIND THE BEST ANIMAL SUPPLIES</h5>
+                    <h1>Popular accessories</h1>
+                    <button>View all toys accesories</button>
+                </div>
+                <div class="overlay"></div>
             </div>
 
             <!-- Inserisco la seconda image -->
             <div class="second-image">
-
+                <div class="images-text">
+                    <h5>FIND THE BEST FOOD</h5>
+                    <h1>New food arrival</h1>
+                    <button>View all food products</button>
+                </div>
+                <div class="overlay"></div>
             </div>
-
         </div>
 
 
         <!-- Inserisco il container per la quarta sezione -->
         <div class="container text-center" id="fourth-container">
+            <div class="emoji">
+                <i class="fa-solid fa-truck"></i>
+                <span class="light">Free worldwide deliveries</span>
+            </div>
+            <div class="emoji">
+                <i class="fa-solid fa-window-restore"></i>
+                <span class="light">Find stores near you</span>
+            </div>
+            <div class="emoji">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span class="light">Best prices guarranteed</span>
+            </div>
+            <div class="emoji">
+                <i class="fa-regular fa-credit-card"></i>
+                <span class="light">All credit card accepted</span>
+            </div>
         </div>
 
     </div>
@@ -149,6 +175,7 @@ export default {
 @use '../styles/general.scss';
 @use '../styles/partials/_variables.scss' as *;
 
+// Definisco il primo grande container con gli user
 #first-container {
     height: auto;
     width: 100%;
@@ -164,7 +191,6 @@ export default {
         h2 {
             font-weight: 400;
             font-size: 50px;
-            font-family: 'Times New Roman', Times, serif;
             margin-bottom: 50px;
         }
 
@@ -179,6 +205,7 @@ export default {
     }
 }
 
+// Definisco il secondo grande container
 #second-container {
     height: auto;
     width: 100%;
@@ -188,6 +215,7 @@ export default {
     position: relative;
     z-index: 2;
 
+    // Definisco il container che si troverà in mezzo
     #middle-container {
         height: 450px;
         position: relative;
@@ -249,6 +277,7 @@ export default {
 
     }
 
+    // Definisco il terzo container con le card per i besti tips
     #third-container {
         width: 100%;
         height: auto;
@@ -288,6 +317,115 @@ export default {
                 background-color: darken($bg-green, 10%);
                 scale: (1.2);
             }
+        }
+    }
+}
+
+// Definisco l'ultimo grande container
+#double-image {
+    width: 100%;
+    height: auto;
+    background-color: $bg-darkgreen;
+
+
+    // Definisco il container per le doppie image
+    .images-container {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        .images-text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+
+            h1 {
+                font-size: 55px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            h5 {
+                font-family: monospace;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            button {
+                font-size: small;
+                font-weight: 600;
+                padding: 10px 20px;
+                border-radius: 50px;
+                border: 0;
+                transition: background-color 0.5s;
+                transform: 0.5s;
+            }
+
+            button:hover {
+                background-color: #ccc;
+                transform: scale(1.1);
+            }
+        }
+
+        .first-image {
+            width: 50%;
+            height: 100%;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-image: url(../../public/images/banner-8-2x.jpg);
+                background-size: cover;
+                background-position: center;
+                filter: brightness(0.8);
+            }
+        }
+
+        .second-image {
+            width: 50%;
+            height: 100%;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                background-image: url(../../public/images/banner-9-2x.jpg);
+                background-size: cover;
+                background-position: center;
+                filter: brightness(0.8);
+            }
+        }
+
+    }
+
+    #fourth-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 300px;
+        color: white;
+
+        i {
+            font-size: 40px;
+            display: block;
+            padding-bottom: 25px;
+        }
+
+        .light {
+            opacity: 0.6;
         }
     }
 }
