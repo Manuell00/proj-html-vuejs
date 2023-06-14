@@ -16,6 +16,32 @@ export default {
     data() {
         return {
             store,
+            charactersListPet: [
+                {
+                    id: "1",
+                    src: "../../public/images/product-8.jpg",
+                    title: "Bed",
+                    quantities: "1",
+                },
+                {
+                    id: "2",
+                    src: "../../public/images/product-3.jpg",
+                    title: "Food",
+                    quantities: "6",
+                },
+                {
+                    id: "3",
+                    src: "../../public/images/product-2.jpg",
+                    title: "Toys",
+                    quantities: "6",
+                },
+                {
+                    id: "4",
+                    src: "../../public/images/product-4.jpg",
+                    title: "Transport",
+                    quantities: "6",
+                },
+            ]
         }
     },
 
@@ -34,7 +60,7 @@ export default {
             </div>
 
             <div class="cards">
-                <SingleCardPet v-for="character in store.charactersListPet" :key="character.id" :detailsPet="character" />
+                <SingleCardPet v-for="character in charactersListPet" :key="character.id" :detailsPet="character" />
             </div>
         </div>
 
@@ -69,6 +95,7 @@ export default {
     }
 
     .cards {
+        width: 100%;
         height: 400px;
         display: flex;
         align-items: center;
