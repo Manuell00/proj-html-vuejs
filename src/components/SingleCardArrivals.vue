@@ -5,9 +5,9 @@ import { store } from '../store.js';
 
 // Inserisco l'EXPORT
 export default {
-    name: 'SingleCardPet',
+    name: 'SingleCardArrivals',
     props: {
-        detailsPet: Object,
+        characterPet: Object,
     },
 
     data() {
@@ -21,21 +21,15 @@ export default {
 
 <!-- TEMPLATE -->
 <template>
-    <div class="prod-card" v-if="detailsPet.id < 5">
+    <div class="prod-card" v-if="characterPet.id">
         <div class="img-container">
-            <img :src="detailsPet.src" :alt="detailsPet.title" class="img">
+            <img :src="characterPet.src" :alt="characterPet.title" class="img">
         </div>
-        <h5>{{ detailsPet.title }} ({{ detailsPet.quantities }})</h5>
-    </div>
-
-    <div class="prod-card" v-if="detailsPet.id >= 5">
-        <div class="img-container">
-            <img :src="detailsPet.src" :alt="detailsPet.title" class="img">
-        </div>
-        <h5>{{ detailsPet.title }}</h5>
+        <h5>{{ characterPet.title }}</h5>
         <div>
-            <span v-if="detailsPet.actualPrice != detailsPet.oldPrice" class="oldprice">{{ detailsPet.oldPrice }}</span>
-            <span class="light">{{ detailsPet.actualPrice }},00</span>
+            <span v-if="characterPet.actualPrice != characterPet.oldPrice" class="oldprice">{{ characterPet.oldPrice
+            }}</span>
+            <span class="light">{{ characterPet.actualPrice }},00</span>
         </div>
     </div>
 </template>
@@ -45,7 +39,7 @@ export default {
 @use '../styles/partials/_variables.scss' as *;
 
 .prod-card {
-    width: calc((100% / 4) - 20px);
+    width: calc((100% / 3) - 10px);
     height: 350px;
     background-color: $bg-grey;
     border: 2px solid lighten(grey, 70%);

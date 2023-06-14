@@ -35,6 +35,7 @@ export default {
     <MainJumbotron />
     <MainCategory />
     <MainUsers />
+    <MainProduct />
 </template>
 
 <!-- STYLE -->
