@@ -418,15 +418,27 @@ export default {
         height: 300px;
         color: white;
 
+        .light {
+            opacity: 0.6;
+        }
+
         i {
             font-size: 40px;
             display: block;
             padding-bottom: 25px;
+            transition: transform 0.7s;
+
+            &:hover {
+                transform: scale(1.2);
+
+                .light {
+                    font-size: 5px;
+                    text-decoration: underline;
+                }
+
+            }
         }
 
-        .light {
-            opacity: 0.6;
-        }
     }
 }
 </style>
