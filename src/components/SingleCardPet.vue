@@ -35,7 +35,7 @@ export default {
         <h5>{{ detailsPet.title }}</h5>
         <div>
             <span v-if="detailsPet.actualPrice != detailsPet.oldPrice" class="oldprice">{{ detailsPet.oldPrice }}</span>
-            <span class="light">{{ detailsPet.actualPrice }}</span>
+            <span class="light">{{ detailsPet.actualPrice }},00</span>
         </div>
     </div>
 </template>

@@ -153,7 +153,15 @@ export default {
         }
 
         .light {
-            color: grey
+            color: grey;
+            transition: all 1s;
+
+            &:hover {
+                border-radius: 50px;
+                color: white;
+                padding: 5px;
+                background-color: $bg-green;
+            }
         }
     }
 
@@ -165,7 +173,8 @@ export default {
 
             &:hover {
                 color: $bg-green;
-                transition: color 1s;
+                transition: color 1s, transform 1s;
+                transform: scale(1.2);
             }
         }
     }

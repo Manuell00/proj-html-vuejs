@@ -104,8 +104,8 @@ export default {
             </div>
         </div>
 
-        <!-- Inserisco il container per il continuo -->
-        <div class="container text-center" id="last-container">
+        <!-- Inserisco il container per la terza sezione -->
+        <div class="container text-center" id="third-container">
             <h2>Get the best tips & tricks</h2>
             <span class="light">Recent articles</span>
 
@@ -116,6 +116,27 @@ export default {
             </div>
 
             <button>Read all the articles</button>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="double-image">
+        <div class="images-container">
+            <!-- Inserisco la prima image -->
+            <div class="first-image">
+
+            </div>
+
+            <!-- Inserisco la seconda image -->
+            <div class="second-image">
+
+            </div>
+
+        </div>
+
+
+        <!-- Inserisco il container per la quarta sezione -->
+        <div class="container text-center" id="fourth-container">
         </div>
 
     </div>
@@ -228,7 +249,7 @@ export default {
 
     }
 
-    #last-container {
+    #third-container {
         width: 100%;
         height: auto;
 
