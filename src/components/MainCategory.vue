@@ -168,7 +168,7 @@ export default {
     text-align: center;
     width: 100%;
     background-color: #fff;
-    padding-top: 100px;
+    padding: 100px 0;
 
     .title {
         width: 50%;
