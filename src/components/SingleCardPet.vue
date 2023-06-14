@@ -49,6 +49,8 @@ export default {
     height: 350px;
     background-color: $bg-grey;
     border: 2px solid lighten(grey, 70%);
+    transition: background-color 0.6s;
+
 
     h5 {
         padding-top: 20px;
@@ -80,6 +82,7 @@ export default {
             max-height: 100%;
             object-fit: cover;
         }
+
     }
 
     &:hover {

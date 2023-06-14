@@ -142,6 +142,15 @@ export default {
                 </div>
             </div>
 
+            <!-- Inserisco i best seller -->
+            <div class="best-seller">
+                <div id="text-sellers">
+                    <h4>All-time best sellers</h4>
+                    <h1>Items everyone loves</h1>
+                </div>
+                <button>View all products</button>
+            </div>
+
             <!-- Inserisco le carte con gli oggetti per gli animali -->
             <div class="cards">
                 <SingleCardPet v-for="character in charactersListPet.slice(4, 8)" :key="character.id"
@@ -182,7 +191,6 @@ export default {
         justify-content: center;
         flex-wrap: wrap;
         gap: 20px;
-        margin-top: 40px;
         flex-direction: row;
     }
 
@@ -198,6 +206,7 @@ export default {
         flex-direction: row;
 
     }
+
 
     .new-arrivals {
         margin-top: 150px;
@@ -259,6 +268,53 @@ export default {
             }
         }
     }
+
+    .best-seller {
+        padding: 15px 0;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        #text-sellers {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+
+            h1 {
+                font-size: 40px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            h4 {
+                font-family: monospace;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: $bg-green;
+            color: white;
+            font-weight: 500;
+            border: 0;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: darken($bg-green, 10%);
+                scale: (1.2);
+            }
+        }
+    }
+
 }
 </style>
   
