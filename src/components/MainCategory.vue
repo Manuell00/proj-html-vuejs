@@ -4,6 +4,7 @@ import { store } from '../store.js';
 
 // Importo i COMPONENTI
 import SingleCardPet from './SingleCardPet.vue'
+import SingleCardFood from './SingleCardFood.vue'
 
 // Inserisco l'EXPORT
 export default {
@@ -11,6 +12,7 @@ export default {
 
     components: {
         SingleCardPet,
+        SingleCardFood
     },
 
     data() {
@@ -48,7 +50,32 @@ export default {
                     actualPrice: "$29",
                     oldPrice: "$29"
                 },
-            ]
+            ],
+            charactersListPetFood: [
+                {
+                    id: "1",
+                    src: "../../public/images/food-transparent-18.png",
+                    title: "Kibble",
+                    description: "Dry dog food",
+                    type: "dry"
+                },
+                {
+                    id: "2",
+                    src: "../../public/images/food-transparent-17.png",
+                    title: "Moist",
+                    description: "Canned dog food",
+                    type: "moist"
+
+                },
+                {
+                    id: "3",
+                    src: "../../public/images/food-transparent-17.png",
+                    title: "Frozen",
+                    description: "Freeze-Dried food",
+                    type: "frozen"
+
+                },
+            ],
         }
     },
 
@@ -68,6 +95,10 @@ export default {
 
             <div class="cards">
                 <SingleCardPet v-for="character in charactersListPet" :key="character.id" :detailsPet="character" />
+            </div>
+
+            <div class="food-cards">
+                <SingleCardFood v-for="character in charactersListPetFood" :key="character.id" :detailsPet="character" />
             </div>
         </div>
 
@@ -110,6 +141,18 @@ export default {
         flex-wrap: wrap;
         gap: 20px;
         margin-top: 40px;
+        flex-direction: row;
+    }
+
+    .food-cards {
+        padding-top: 150px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
         flex-direction: row;
     }
 
