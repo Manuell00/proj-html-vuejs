@@ -22,24 +22,31 @@ export default {
                     src: "../../public/images/product-8.jpg",
                     title: "Bed",
                     quantities: "1",
+                    actualPrice: "$18 - $26"
                 },
                 {
                     id: "2",
                     src: "../../public/images/product-3.jpg",
                     title: "Food",
                     quantities: "6",
+                    actualPrice: "$18",
+                    oldPrice: "$29"
                 },
                 {
                     id: "3",
                     src: "../../public/images/product-2.jpg",
                     title: "Toys",
                     quantities: "6",
+                    actualPrice: "$29",
+                    oldPrice: "$29"
                 },
                 {
                     id: "4",
                     src: "../../public/images/product-4.jpg",
                     title: "Transport",
                     quantities: "6",
+                    actualPrice: "$29",
+                    oldPrice: "$29"
                 },
             ]
         }
