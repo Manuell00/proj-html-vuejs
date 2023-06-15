@@ -28,7 +28,7 @@ export default {
         <h5>{{ characterPet.title }}</h5>
         <div>
             <span v-if="characterPet.actualPrice != characterPet.oldPrice" class="oldprice">{{ characterPet.oldPrice
-            }}</span>
+            }},00</span>
             <span class="light">{{ characterPet.actualPrice }},00</span>
         </div>
     </div>
