@@ -28,27 +28,47 @@ export default {
   },
 
   // Dovrò inserire i metodi
+  methods: {
+    load() {
+      store.loading = true
+      setTimeout(() => {
+        store.loading = false;
+      }, 2000);
+    }
+  },
+  // CREATED viene utilizzato al posto di mounted perchè svolge l'attività quando viene creata l'app
+  created() {
+    this.load()
+  }
 }
+
+
 </script>
 
 
 
 <!-- TEMPLATE -->
 <template>
-  <!-- Inserisco l'header e il suo componente -->
-  <header>
-    <AppHeader />
-  </header>
+  <div v-if="store.loading">
+    <AppLoader />
+  </div>
 
-  <!-- Inserisco il main e il suo componente -->
-  <main>
-    <AppMain />
-  </main>
+  <div v-else>
+    <!-- Inserisco l'header e il suo componente -->
+    <header>
+      <AppHeader />
+    </header>
 
-  <!-- Inserisco il footer e il suo componente -->
-  <footer>
-    <AppFooter />
-  </footer>
+    <!-- Inserisco il main e il suo componente -->
+    <main>
+      <AppMain />
+    </main>
+
+    <!-- Inserisco il footer e il suo componente -->
+    <footer>
+      <AppFooter />
+    </footer>
+  </div>
 </template>
 
 
