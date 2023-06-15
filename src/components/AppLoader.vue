@@ -65,7 +65,7 @@ svg {
 
 .text {
     margin-top: 80px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
     font-size: 50px;
 }

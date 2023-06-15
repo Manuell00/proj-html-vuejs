@@ -158,7 +158,7 @@ export default {
             flex-direction: column;
             gap: 10px;
 
-            span {
+            transform: rotate(-20deg) span {
                 width: calc(100% - 40px);
                 font-size: 22px;
                 padding-bottom: 15px;
